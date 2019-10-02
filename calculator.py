@@ -29,21 +29,36 @@ while True:
         quit()
 
     num1 = float(token[1])
-    num2 = float(token[2])
-
     
 
-    if operator == "+":
-        answer = add(num1, num2) 
+    if operator == "square":
+        answer = square(num1)
 
-    elif operator == "-":
-        answer = subtract(num1, num2)
-
-    elif operator == "*":
-        answer = multiply(num1, num2)
-
-    elif operator == "/":
-        answer = divide(num1, num2)
+    elif operator == "cube":
+        answer = cube(num1)
+    else:
+        num2 = float(token[2])
         
+        if operator == "+":
+            answer = add(num1, num2) 
+
+        elif operator == "-":
+            answer = subtract(num1, num2)
+
+        elif operator == "*":
+            answer = multiply(num1, num2)
+
+        elif operator == "/":
+            answer = divide(num1, num2)
+       
+        elif operator == "pow":
+            answer = power(num1, num2)
+      
+        elif operator == "mod":
+            answer = mod(num1, num2)
+        
+   
+        
+
     #dont forget the loop
     print(answer)
